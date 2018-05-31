@@ -6,7 +6,7 @@
       </div>
       <div class="header-nav">
         <ul>
-          <li>登录</li>
+          <li @click="loginClick">登录</li>
           <li class="nav-pile">|</li>
           <li>注册</li>
           <li class="nav-pile">|</li>
@@ -14,12 +14,35 @@
         </ul>
       </div>
     </div>
+    <nav-mask :is-show="isShowLoginMask" @on-close="closeMask">
+      <login></login>
+    </nav-mask>
   </div>
 </template>
 
 <script>
+    import navMask from "../mask/mask";
+    import Login from "../login/login";
+
     export default {
-        name: "nav-header"
+      components: {
+        Login,
+        navMask},
+      name: "nav-header",
+      data() {
+        return {
+          isShowLoginMask: false,
+        }
+      },
+      methods: {
+        loginClick() {
+          this.isShowLoginMask = true
+          console.log('login')
+        },
+        closeMask () {
+          this.isShowLoginMask = false
+        }
+      }
     }
 </script>
 
@@ -52,4 +75,7 @@
   .nav-pile {
     padding: 0 10px;
   }
+
+
+
 </style>

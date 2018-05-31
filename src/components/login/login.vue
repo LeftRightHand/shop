@@ -1,0 +1,57 @@
+<template>
+  <div class="login-wrapper">
+    <div class="login-content">
+      <div class="login-title">
+        <h2>用户名密码登录</h2>
+      </div>
+      <div class="login-input">
+        <input type="text" placeholder="请输入用户名">
+      </div>
+      <div class="login-input">
+        <input type="password" placeholder="请输入密码">
+      </div>
+      <div class="login-btn">
+        <a class="button">登录</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+    export default {
+        name: "login"
+    }
+</script>
+
+<style scoped>
+
+  .login-wrapper {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    overflow: auto;
+    background: #fff;
+    z-index: 60;
+    box-shadow: 0 0 1px #ddd;
+    left: 50%;
+    top: 20%;
+  }
+  .login-content {
+    text-align: center;
+  }
+  .login-input {
+    width: 80%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .login-input input {
+    width: 100%;
+    height: 100%;
+  }
+  .button {
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+  }
+</style>

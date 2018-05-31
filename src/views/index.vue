@@ -206,11 +206,12 @@
   }
   .slider {
     margin: 10px;
-    width: 900px;
+    width: 860px;
     height: 460px;
   }
   .index-board-list {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
     overflow: hidden;
   }
   .index-board-item {
@@ -219,6 +220,8 @@
     background: #fff;
     margin-right: 20px;
     padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
   .index-board-item-inner {
     min-height: 125px;
