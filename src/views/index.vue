@@ -1,5 +1,6 @@
 <template>
   <div class="index-wrapper">
+    <div class="index-content">
       <div class="index-left">
         <div class="index-left-block">
           <h2>全部产品</h2>
@@ -32,13 +33,14 @@
               <h2>{{item.title}}</h2>
               <p>{{item.description}}</p>
               <div class="index-board-button">
-                <router-link class="button" :to="{path:''}">立即购买</router-link>
+                <router-link class="button" :to="{path:'/detail'}">立即购买</router-link>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -166,6 +168,9 @@
 
 <style scoped>
   .index-wrapper {
+    width: 100%;
+  }
+  .index-content {
     width: 1200px;
     margin: 0 auto;
   }
